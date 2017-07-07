@@ -12,11 +12,11 @@ var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = 'CLIENT_ID'; // Your client id
-var client_secret = 'CLIENT_SECRET'; // Your secret
-var redirect_uri = 'REDIRECT_URI'; // Your redirect uri
+var client_id = 'c728a4586eb64759b39023663653dd50';
+var client_secret = '710a38de48744990a7045e7debfb6c78';
+var redirect_uri = 'http://localhost:8888';
 
-/**
+/*
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string
  * @return {string} The generated string
