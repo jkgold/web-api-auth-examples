@@ -12,9 +12,10 @@ var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
-var client_id = 'c728a4586eb64759b39023663653dd50';
-var client_secret = '710a38de48744990a7045e7debfb6c78';
-var redirect_uri = 'http://localhost:8888';
+var client_id = 'b7674ed7b6d94ddd9352f7a3189efdd4';
+var client_secret = '7fb1d710580343539ce5c2a89af73adb';
+var redirect_uri = 'http://localhost:8888/callback';
+console.log("hello yo mama");
 
 /*
  * Generates a random string containing numbers and letters
@@ -56,6 +57,7 @@ app.get('/login', function(req, res) {
 });
 
 app.get('/callback', function(req, res) {
+  // console.log("hello yo mama");
 
   // your application requests refresh and access tokens
   // after checking the state parameter
@@ -95,6 +97,7 @@ app.get('/callback', function(req, res) {
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };
+        // console.log("hello yo mama");
 
         // use the access token to access the Spotify Web API
         request.get(options, function(error, response, body) {
